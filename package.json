@@ -38,5 +38,10 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "@types/estree": "0.0.39",
+    "estree-walker": "^0.6.1",
+    "stadt": "^0.3.0"
   }
 }
