@@ -138,12 +138,12 @@ export interface Rule {
 }
 
 export function runRules(
-  ast: walker.Node,
+  ast: estree.Node,
   rules: ReadonlyArray<Rule>,
   context: Context = new Context()
 ): Context {
   const visitors = rules.map(rule => rule.create(context));
-  walker.walk(ast, {
+  walk(ast, {
     enter(walkerNode) {
       const node = walkerNode as estree.Node;
       for (const visitor of visitors) {
