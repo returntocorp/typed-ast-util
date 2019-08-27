@@ -131,6 +131,11 @@ export interface Visitor {
   ExportDefaultDeclaration?: (node: estree.ExportDefaultDeclaration) => void;
   ExportAllDeclaration?: (node: estree.ExportAllDeclaration) => void;
   AwaitExpression?: (node: estree.AwaitExpression) => void;
+
+  // This exists for nodes whose name we forgot about. We can't give this the
+  // actual type (node: estree.Node) => void because the type has to unify with
+  // all the explicitly declared member types.
+  [nodeName: string]: any;
 }
 
 export interface Rule {
