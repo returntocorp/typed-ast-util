@@ -1,5 +1,5 @@
 {
-  "name": "@r2c/typed-ast-rule-lib",
+  "name": "@r2c/typed-ast-util",
   "version": "1.0.0",
   "description": "A helper library for writing and running rules over type-augmented JS ASTs.",
   "main": "dist/index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/returntocorp/typed-ast-rule-lib.git"
+    "url": "git+ssh://git@github.com/returntocorp/typed-ast-util.git"
   },
   "author": "Ash Zahlen <ash@returntocorp.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/returntocorp/typed-ast-rule-lib/issues"
+    "url": "https://github.com/returntocorp/typed-ast-util/issues"
   },
-  "homepage": "https://github.com/returntocorp/typed-ast-rule-lib#readme",
+  "homepage": "https://github.com/returntocorp/typed-ast-util#readme",
   "devDependencies": {
     "@types/chai": "^4.2.0",
     "@types/esprima": "^4.0.2",
