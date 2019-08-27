@@ -49,9 +49,14 @@ function reportToResult(report: rule.Report, path: string): Result {
 }
 
 // Runs the given rules over all .ast.json files contained in the given
-// directory. The output paths are obtained from the input paths by interpreting
-// them as relative to the input directory and then stripping off the .ast.json
-// suffix.
+// directory. The output paths are obtained from the input paths by making them
+// relative to the input directory and then stripping off the .ast.json suffix.
+//
+// The output format is compatible with the r2c analyzer output format, so you
+// can just do something like
+//
+// const results = await checkAllASTs(..., ...);
+// process.stdout.write(JSON.stringify({results}));
 export async function checkAllASTs(
   rules: ReadonlyArray<rule.Rule>,
   inputDir: string
