@@ -1,5 +1,5 @@
 import * as estree from "estree";
-import * as fs from "fs";
+import { promises as fsPromises } from "fs";
 import * as glob from "glob";
 import * as path from "path";
 import * as rule from "./rule";
@@ -68,7 +68,7 @@ export async function checkAllASTs(
   });
   const results = [];
   for (const astPath of astPaths) {
-    const ast = JSON.parse(await fs.promises.readFile(astPath, "utf8"));
+    const ast = JSON.parse(await fsPromises.readFile(astPath, "utf8"));
     for (const report of rule.runRules(ast, rules).getReports()) {
       let originalPath = path.relative(inputDir, astPath);
       // Trim off the .ast.json suffix to recover the original.
