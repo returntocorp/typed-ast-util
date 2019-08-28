@@ -1,6 +1,6 @@
 {
   "name": "@r2c/typed-ast-util",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A helper library for writing and running rules over type-augmented JS ASTs.",
   "main": "dist/index.js",
   "scripts": {

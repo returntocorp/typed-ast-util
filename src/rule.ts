@@ -1,10 +1,9 @@
 import * as estree from "estree";
 import * as walker from "estree-walker";
-import * as stadt from "stadt";
 
 declare module "estree" {
   export interface BaseNode {
-    inferredType?: stadt.Type;
+    inferredType?: any;
   }
 }
 
